@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <title>Fillable Form</title>
+    <link rel="stylesheet" href="register_styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="userForm">
+            <h2>Fill in your details</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Given Name"required>
+
+            <label for="surname" >Surname:</label>
+            <input type="text" id="surname" name="surname" placeholder="Surname" required>
+
+            <label for="country">Country:</label>
+            <div class="dropdown">
+                <input type="text" id="country" name="country" placeholder="Select your country" readonly required>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" name="country" value="USA"> USA</label>
+                    <label><input type="checkbox" name="country" value="Canada"> Canada</label>
+                    <label><input type="checkbox" name="country" value="UK"> UK</label>
+                    <label><input type="checkbox" name="country" value="Australia"> Australia</label>
+                    <label><input type="checkbox" name="country" value="Uzbekistan"> Uzbekistan</label>
+                </div>
+            </div>
+
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email account" required>
+
+            <!-- Optional comment section -->
+            <label for="comments">Comment:</label>
+            <textarea id="comments" name="comments" placeholder="Add any additional comments here..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="formOutput"></div>
+    </div>
+
+    <script src="register_actions.js"></script>
+</body>
+</html>
